@@ -1,0 +1,44 @@
+/* Feuille de style
+Lieu        : ETML
+Auteur      : Jérémie Bussy
+Date        : 09.11.2020
+Description : feuille de style
+*/
+
+/* Pour la barre de navigation */
+.navbar {
+  border: 2px solid;
+  background-color: lightgray;
+}
+
+.navbar p {
+  text-align: center;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+/* Pour la liste */
+table {
+  width: 100%;
+}
+
+table tr {
+  text-align: left;
+}
+
+/* Pour le footer */
+.footer {
+  text-align: center;
+  border-top: solid 1px;
+  bottom: 0px;
+  right: 0px;
+  position: fixed;
+  width: 100%;
+}
+
+/* Pour l'article principal */
+.article {
+  margin: 0 50px 0 50px;
+}
