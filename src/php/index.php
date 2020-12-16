@@ -20,12 +20,10 @@
     <?php
     include("Database.php");
         //Connexion à la bd
-        //$database = new Database();
+        $database = new Database();
 
         //Récupérer tous les enseignants
-        //$teachers = $database->getAllTeachers();
-
-        //Deconnexion de la bd
+        $events = $database->getAllEvents();
     ?>
 
     <div class="mainContent">
@@ -35,6 +33,7 @@
 
         <?php
             echo date('d/m/Y'). '<br>';
+            $event = "";
         ?>
 
         <table id="printer-table" class="table table-striped table-bordered" style="width:100%">
@@ -53,52 +52,79 @@
         </div>
         <tbody>
             <tr>
-                <td class="bg-primary">gg</td>
-                <td class="bg-secondary">dd</td>
-                <td class="bg-success">sd</td>
-                <td class="bg-danger">sas</td>
-                <td class="bg-warning">sas</td>
-                <td class="bg-info">sas</td>
-                <td class="bg-light">sas</td>
+                <td class="bg-primary"><?php echo $event; ?></td>
+                <td class="bg-secondary"><?php echo $event;?></td>
+                <td class="bg-success"><?php echo $event; ?></td>
+                <td class="bg-danger"><?php echo $event; ?></td>
+                <td class="bg-warning"><?php echo $event; ?></td>
+                <td class="bg-info"><?php echo $event; ?></td>
+                <td class="bg-light"><?php echo $event; ?></td>
             <tr>
             <tr>
-                <td class="bg-primary">gg</td>
-                <td class="bg-secondary">dd</td>
-                <td class="bg-success">sd</td>
-                <td class="bg-danger">sas</td>
-                <td class="bg-warning">sas</td>
-                <td class="bg-info">sas</td>
-                <td class="bg-light">sas</td>
+                <td class="bg-primary"><?php echo $event; ?></td>
+                <td class="bg-secondary"><?php echo $event; ?></td>
+                <td class="bg-success"><?php echo $event; ?></td>
+                <td class="bg-danger"><?php echo $event; ?></td>
+                <td class="bg-warning"><?php echo $event; ?></td>
+                <td class="bg-info"><?php echo $event; ?></td>
+                <td class="bg-light"><?php echo $event; ?></td>
             <tr>
             <tr>
-                <td class="bg-primary">gg</td>
-                <td class="bg-secondary">dd</td>
-                <td class="bg-success">sd</td>
-                <td class="bg-danger">sas</td>
-                <td class="bg-warning">sas</td>
-                <td class="bg-info">sas</td>
-                <td class="bg-light">sas</td>
+                <td class="bg-primary"><?php echo $event; ?></td>
+                <td class="bg-secondary"><?php echo $event; ?></td>
+                <td class="bg-success"><?php echo $event; ?></td>
+                <td class="bg-danger"><?php echo $event; ?></td>
+                <td class="bg-warning"><?php echo $event; ?></td>
+                <td class="bg-info"><?php echo $event; ?></td>
+                <td class="bg-light"><?php echo $event; ?></td>
             <tr>
             <tr>
-                <td class="bg-primary">gg</td>
-                <td class="bg-secondary">dd</td>
-                <td class="bg-success">sd</td>
-                <td class="bg-danger">sas</td>
-                <td class="bg-warning">sas</td>
-                <td class="bg-info">sas</td>
-                <td class="bg-light">sas</td>
+                <td class="bg-primary"><?php echo $event; ?></td>
+                <td class="bg-secondary"><?php echo $event; ?></td>
+                <td class="bg-success"><?php echo $event; ?></td>
+                <td class="bg-danger"><?php echo $event; ?></td>
+                <td class="bg-warning"><?php echo $event; ?></td>
+                <td class="bg-info"><?php echo $event; ?></td>
+                <td class="bg-light"><?php echo $event; ?></td>
             <tr>
             <tr>
-                <td class="bg-primary">gg</td>
-                <td class="bg-secondary">dd</td>
-                <td class="bg-success">sd</td>
-                <td class="bg-danger">sas</td>
-                <td class="bg-warning">sas</td>
-                <td class="bg-info">sas</td>
-                <td class="bg-light">sas</td>
+                <td class="bg-primary"><?php echo $event; ?></td>
+                <td class="bg-secondary"><?php echo $event; ?></td>
+                <td class="bg-success"><?php echo $event; ?></td>
+                <td class="bg-danger"><?php echo $event; ?></td>
+                <td class="bg-warning"><?php echo $event; ?></td>
+                <td class="bg-info"><?php echo $event; ?></td>
+                <td class="bg-light"><?php echo $event; ?></td>
             <tr>
         </tbody>
     </table>
+
+    <div class="table">
+                <table>
+                    <tr>
+                        <th class="bg-primary">Lundi</th>
+                        <th class="bg-secondary">Mardi</th>
+                        <th class="bg-success">Mercredi</th>
+                        <th class="bg-danger">Jeudi</th>
+                        <th class="bg-warning">Vendredi</th>
+                        <th class="bg-info">Samedi</th>
+                        <th class="bg-light">Dimanche</th>
+                    </tr>
+                    <?php
+                    foreach($events as $event) {
+                    echo "<tr>";
+                    echo "<td>" . $teacher['teaLastName'] . " " . $teacher['teaFirstName'] . "</td>";
+                    echo "<td>" . $teacher['teaNickname'] . "</td>";
+                    echo '<td>
+                            <a class="margin" href="detail.php?idTeacher=' . $teacher['idTeacher'] . '"><i class="fas fa-info"></i></a>
+                            <a class="margin" href="updateTeacher.php?idTeacher=' . $teacher['idTeacher'] . '"><i class="fas fa-pen"></i></a>
+                            <a class="margin" onclick="return confirm(\'Voulez-vous vraiment supprimer cet enseignant?\')" href="moveTeacher.php?idTeacher=' . $teacher['idTeacher'] . '"><i class="fas fa-trash-alt"></i></a>
+                        </td>';
+                    echo "</tr>";
+                    }
+                    ?>
+                </table>
+            </div>
 
     </footer>
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

@@ -77,20 +77,16 @@
     }
 
     /**
-     * TODO: tout les enseignants de la db
+     * Tous les événements de la bdd
      */
-    public function getAllTeachers(){
+    public function getAllEvents(){
 
         // TODO: avoir la requête sql
-        $query = "SELECT * FROM t_teacher";
+        $query = "SELECT * FROM t_taches";
         $req = $this->queryPrepareExecute($query, null );
         $result = $this->formatData($req);
         $this->unsetData($req);
         return $result;
-        // TODO: appeler la méthode pour executer la requête
-        // TODO: appeler la méthode pour avoir le résultat sous forme de tableau
-        // TODO: retour tous les enseignants
-
     }
 
     /**
@@ -117,9 +113,5 @@
         $this->unsetData($req);
 
     }
-
-    // + tous les autres méthodes dont vous aurez besoin pour la suite (insertTeacher ... etc)
  }
-
-
 ?>
