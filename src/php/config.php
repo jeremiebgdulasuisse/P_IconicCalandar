@@ -7,9 +7,9 @@
      */
 $MM_CONFIG = array(
 "database" => array(
-    "dbname" => "db_nickname_toiriedo",
-    "username" => "dbNicknameUser",
-    "password" => ".etml-",
+    "dbname" => "db_calendar",
+    "username" => "root",
+    "password" => "root",
     "host" => "localhost",
     "port" => "3306",
     "charset" => "utf8"
