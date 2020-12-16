@@ -33,38 +33,68 @@
 
         <div class="article">
 
+        <?php
+            echo date('d/m/Y'). '<br>';
+        ?>
+
         <table id="printer-table" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>Lundi</th>
-                <th>Mardi</th>
-                <th>Mercredi</th>
-                <th>Jeudi</th>
-                <th>Vendredi</th>
-                <th>Samedi</th>
-                <th>Dimanche</th>
+                <th class="bg-primary">Lundi</th>
+                <th class="bg-secondary">Mardi</th>
+                <th class="bg-success">Mercredi</th>
+                <th class="bg-danger">Jeudi</th>
+                <th class="bg-warning">Vendredi</th>
+                <th class="bg-info">Samedi</th>
+                <th class="bg-light">Dimanche</th>
             </tr>
         </thead>
         <tbody>
-            <?php
-            foreach ($printers as $printer) {
-                echo "<tr>";
-                echo "<td>" . $printer['impFabriquant'] . "</td>";
-                echo "<td>" . $printer['impMarque'] . "</td>";
-                echo "<td>" . $printer['impModele'] . "</td>";
-                echo "<td>" . $printer['impTechImpression'] . "</td>";
-                echo "<td>" . $printer['impVitesseImpression'] . "</td>";
-                echo "<td>" . $printer['impCapaciteBac'] . "</td>";
-                echo "<td>" . $printer['impPoids'] . "</td>";
-                echo "<td>" . $printer['impResolutionX'] . "</td>";
-                echo "<td>" . $printer['impResolutionY'] . "</td>";
-                echo "<td>" . $printer['impLongueur'] . "</td>";
-                echo "<td>" . $printer['impLargeur'] . "</td>";
-                echo "<td>" . $printer['impHauteur'] . "</td>";
-                echo "<td>" . $printer['impPrix'] . "</td>";
-                echo "</tr>";
-            }
-            ?>
+            <tr>
+                <td class="bg-primary">gg</td>
+                <td class="bg-secondary">dd</td>
+                <td class="bg-success">sd</td>
+                <td class="bg-danger">sas</td>
+                <td class="bg-warning">sas</td>
+                <td class="bg-info">sas</td>
+                <td class="bg-light">sas</td>
+            <tr>
+            <tr>
+                <td class="bg-primary">gg</td>
+                <td class="bg-secondary">dd</td>
+                <td class="bg-success">sd</td>
+                <td class="bg-danger">sas</td>
+                <td class="bg-warning">sas</td>
+                <td class="bg-info">sas</td>
+                <td class="bg-light">sas</td>
+            <tr>
+            <tr>
+                <td class="bg-primary">gg</td>
+                <td class="bg-secondary">dd</td>
+                <td class="bg-success">sd</td>
+                <td class="bg-danger">sas</td>
+                <td class="bg-warning">sas</td>
+                <td class="bg-info">sas</td>
+                <td class="bg-light">sas</td>
+            <tr>
+            <tr>
+                <td class="bg-primary">gg</td>
+                <td class="bg-secondary">dd</td>
+                <td class="bg-success">sd</td>
+                <td class="bg-danger">sas</td>
+                <td class="bg-warning">sas</td>
+                <td class="bg-info">sas</td>
+                <td class="bg-light">sas</td>
+            <tr>
+            <tr>
+                <td class="bg-primary">gg</td>
+                <td class="bg-secondary">dd</td>
+                <td class="bg-success">sd</td>
+                <td class="bg-danger">sas</td>
+                <td class="bg-warning">sas</td>
+                <td class="bg-info">sas</td>
+                <td class="bg-light">sas</td>
+            <tr>
         </tbody>
     </table>
 

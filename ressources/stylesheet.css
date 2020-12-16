@@ -42,3 +42,7 @@ table tr {
 .article {
   margin: 0 50px 0 50px;
 }
+
+tr td {
+  margin: 5px;
+}
