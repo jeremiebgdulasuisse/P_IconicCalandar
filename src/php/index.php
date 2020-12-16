@@ -30,14 +30,15 @@
 
     <div class="mainContent">
         <h1>Calendrier</h1>
-
-        <div class="article">
+        <div id="#pbar_outerdiv">
+        <div class="article" class="#pbar_outerdiv">
 
         <?php
             echo date('d/m/Y'). '<br>';
         ?>
 
         <table id="printer-table" class="table table-striped table-bordered" style="width:100%">
+        <div >
         <thead>
             <tr>
                 <th class="bg-primary">Lundi</th>
@@ -49,6 +50,7 @@
                 <th class="bg-light">Dimanche</th>
             </tr>
         </thead>
+        </div>
         <tbody>
             <tr>
                 <td class="bg-primary">gg</td>
