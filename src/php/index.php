@@ -30,10 +30,11 @@
 
     <div class="mainContent">
         <h1>Calendrier</h1>
-
-        <div class="article">
+        <div id="#pbar_outerdiv">
+        <div class="article" class="#pbar_outerdiv">
 
         <table id="printer-table" class="table table-striped table-bordered" style="width:100%">
+        <div >
         <thead>
             <tr>
                 <th>Lundi</th>
@@ -45,6 +46,7 @@
                 <th>Dimanche</th>
             </tr>
         </thead>
+        </div>
         <tbody>
             <?php
             foreach ($printers as $printer) {
